@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Grabbing a file from S3</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Grabbing a file from S3</h1><br/><p><h2>What Is S3?</h2></p><p>Simple Storage Service (S3) is a service provided by Amazon Web Services (AWS) that allows you to store data in a scalable and reliable way. Data is stored on buckets, which act as a folder in the cloud where you can store files, applications, backup information or anything you need.</p><p>Before we continue, we need to know what exactly is S3. Amazon S3 stands for <strong>Simple Storage Service</strong>. It is an object storage service provided by Amazon Web Services that can store any type of object such as images, documents, logs and backup files. Companies often use S3 to store data for various reasons, such as reference images for their website, documents to be shared with clients, or files used by internal services for internal processing. Any object you store in S3 will be put into a &quot;Bucket&quot;. You can think of a bucket as a directory where you can store files, but in the cloud.</p><p><a href="https://cdn-images.tryhackme.com/user-uploads/5ed5961c6276df568891c3ea/room-content/5ed5961c6276df568891c3ea-1764128730134.png"><img src="images/160-1.png" alt="images/160-1.png" /></a></p><p></p><p>Now, let&#39;s see what our newly gained access to Sir Carrotbane&#39;s S3 bucket provides us.</p><p></p><p><h2>Listing Contents From a Bucket</h2></p><p>Since our profile has permission to ListAllBuckets, we can list the available S3 buckets by running the following command:</p><p><code>aws s3api list-buckets</code></p><p>There is one interesting bucket in there that references easter. Let&#39;s check out the contents of this directory.</p><p><code>aws s3api list-objects --bucket easter-secrets-123145</code></p><p>Hmmm, let&#39;s copy the file in this directory to our local machine. This might have a secret message.</p><p><code>aws s3api get-object --bucket easter-secrets-123145 --key cloud_password.txt cloud_password.txt</code></p><p>Hooray! We have successfully infiltrated Sir Carrotbane&#39;s S3 bucket and exfiltrated some sensitive data.</p></div>
+</body>
+</html>

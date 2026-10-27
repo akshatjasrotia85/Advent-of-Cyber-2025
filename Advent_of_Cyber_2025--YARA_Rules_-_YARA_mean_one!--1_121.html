@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>1</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>1</h1><br/><p><img src="images/121-1.png" alt="images/121-1.png" /></p><p>                                                                                                                            </p><p><img src="images/121-2.png" alt="images/121-2.png" /></p><p></p><p>ubuntu@tryhackme:~$ cat &gt; script.yar</p><p>rule TBFC_Finder</p><p>{</p><p></p><p>meta:</p><p> author = &quot;TBFC Blue&quot;</p><p> descriptton = &quot;Extracts TBFC message Fragments sent by Mcskidy&quot;</p><p> date = &quot;2025-12-13&quot;</p><p> </p><p>strings:</p><p> $tbfc_msg = /TBFC:[A-Za-z0-9]+/ ascii</p><p> </p><p>condition:</p><p> $tbfc_msg</p><p></p><p>}</p><p>^C</p><p>ubuntu@tryhackme:~$ yara -rs script.yar /home/ubuntu</p><p>TBFC_Finder /home/ubuntu/Downloads/easter/easter46.jpg</p><p>0x2f78a:$tbfc_msg: TBFC:HopSec</p><p>TBFC_Finder /home/ubuntu/Downloads/easter/easter10.jpg</p><p>0x137da8:$tbfc_msg: TBFC:Find</p><p>TBFC_Finder /home/ubuntu/Downloads/easter/easter16.jpg</p><p>0x3bb7f7:$tbfc_msg: TBFC:me</p><p>TBFC_Finder /home/ubuntu/Downloads/easter/easter52.jpg</p><p>0x2a2ad2:$tbfc_msg: TBFC:Island</p><p>TBFC_Finder /home/ubuntu/Downloads/easter/easter25.jpg</p><p>0x42c778:$tbfc_msg: TBFC:in</p></div>
+</body>
+</html>

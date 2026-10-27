@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Fifth Lock - Prison Tower</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Fifth Lock - Prison Tower</h1><br/><p><a href="https://cdn-images.tryhackme.com/user-uploads/68baea2454c82afe90fd7020/room-content/68baea2454c82afe90fd7020-1763631352514.png"><img src="images/138-1.png" alt="images/138-1.png" /></a></p><p></p><p><h2>Fifth Lock - Prison Tower</h2></p><p>Ready for the final hurdle?</p><p>As the defenses weaken, you receive another hidden message from McSkidy:</p><p><em>“I can see you are ready to break the last lock. Be aware that Sir BreachBlocker III implemented different mechanisms for the last lock, which change occasionally. Make sure you match the correct approach when decoding the password.”</em></p><p>That sounds tricky, but do not despair. You will find a way.</p><p>     1. Let’s start. Extract the information as before, noting down the encoded guard name.</p><p><a href="https://cdn-images.tryhackme.com/user-uploads/68baea2454c82afe90fd7020/room-content/68baea2454c82afe90fd7020-1763627625991.png"><img src="images/138-2.png" alt="images/138-2.png" /></a></p><p>     </p><p>     2. Additionally, note the recipe ID from the header and match the corresponding login logic. Below is a quick cheat sheet for decoding each recipe.</p><p><table class="table"><tr><th>Recipe ID</th><th>Reverse Logic</th></tr><tr><td>1</td><td>From Base64 ⇒ Reverse ⇒ ROT13</td></tr><tr><td>2</td><td>From Base64 ⇒ From Hex ⇒ Reverse</td></tr><tr><td>3</td><td>ROT13 ⇒ From Base64 ⇒ XOR(extracted key)</td></tr><tr><td>4</td><td>ROT13 ⇒ From Base64 ⇒ ROT47</td></tr></table></p><p></p><p>     3. Build the reverse recipe with CyberChef and extract the final password.</p><p>Finally, the last lock has been breached, and you provided a safe path for McSkidy to escape.</p></div>
+</body>
+</html>

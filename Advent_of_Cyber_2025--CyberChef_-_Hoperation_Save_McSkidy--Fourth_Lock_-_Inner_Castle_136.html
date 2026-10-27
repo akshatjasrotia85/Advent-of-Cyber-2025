@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Fourth Lock - Inner Castle</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Fourth Lock - Inner Castle</h1><br/><p><a href="https://cdn-images.tryhackme.com/user-uploads/68baea2454c82afe90fd7020/room-content/68baea2454c82afe90fd7020-1763632423450.png"><img src="images/136-1.png" alt="images/136-1.png" /></a></p><p></p><p><h2>Fourth Lock - Inner Castle</h2></p><p>We are almost there. In this level, Sir BreachBlocker III throws you a curveball. Let’s see how to tackle this.</p><p>     1. But first, go ahead and look at the login logic as before. We will not be needing header information for this one.</p><p><a href="https://cdn-images.tryhackme.com/user-uploads/68baea2454c82afe90fd7020/room-content/68baea2454c82afe90fd7020-1763626852157.png"><img src="images/136-2.png" alt="images/136-2.png" /></a></p><p>     </p><p>     2. After asking the guard for the password and looking at it&#39;s reply, it seems a bit odd. At the same time, the login logic shows the use of a MD5 hash.</p><p><a href="https://cdn-images.tryhackme.com/user-uploads/68baea2454c82afe90fd7020/room-content/68baea2454c82afe90fd7020-1763626851107.png"><img src="images/136-3.png" alt="images/136-3.png" /></a></p><p></p><p><h2>Theory Time</h2></p><p>MD5, or Message-Digest Algorithm 5, is a cryptographic algorithm that produces a fixed-size hash value. While this is supposed to be a one-way function, meaning you cannot reverse it, precomputed hashes can be leveraged to identify the input.</p><p>     3. Putting the two together, the plaintext password is passed through MD5, and you have the hash. This looks like a job for <a href="https://crackstation.net/">CrackStation</a>.</p><p>     4. Go ahead and open the site and paste the hash to retrieve the password.</p><p><a href="https://cdn-images.tryhackme.com/user-uploads/68baea2454c82afe90fd7020/room-content/68baea2454c82afe90fd7020-1763626852611.png"><img src="images/136-4.png" alt="images/136-4.png" /></a></p><p>     </p><p>     5. Use the credentials and advance to the final level.</p><p>Fantastic. One more lock and you will ensure McSkidy has safe passage and escapes.</p></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Introduction</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Introduction</h1><br/><p>AWS accounts can be accessed programmatically by using an Access Key ID and a Secret Access Key. For this room, both of those will be automatically configured for you. The AWS CLI will look for credentials atÂ <code>~/.aws/credentials</code>, where you should see something similar to the following:</p><p></p><p><code>aws_access_key_id = AKIAU2VYTBGYOYXYZXYZ</code><code></code></p><p><code>aws_secret_access_key = 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</code></p><p>Amazon Security Token Service (STS) allows us to utilise the credentials of a user that we have saved during our AWS CLI configuration. We can use the <code>get-caller-identity</code> call to retrieve information about the user we have configured for the AWS CLI. Let&#39;s run the following command:</p><p><code>aws sts get-caller-identity</code></p><p>We will see the following output when we run this command.</p><p></p><p>Checking AWS CLI Configuration</p><p>      <code>user@machine$ aws sts get-caller-identity</code><code></code></p><p><code>{</code><code></code></p><p><code>    &quot;UserId&quot;: &quot;AIDAU2VYTBGYOHNOCJMX3&quot;,</code><code></code></p><p><code>    &quot;Account&quot;: &quot;332173347248&quot;,</code><code></code></p><p><code>    &quot;Arn&quot;: &quot;arn:aws:iam::332173347248:user/sir.carrotbane&quot;</code><code></code></p><p><code>}</code></p><p>    </p><p></p><p>Seeing the output, the elf was overjoyed. The credentials work, and as can be seen by the name at the end, they belong to Sir Carrotbane. The elf can now attempt to regain access to TBFC&#39;s cloud network using these credentials.</p></div>
+</body>
+</html>
